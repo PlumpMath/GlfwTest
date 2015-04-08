@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		034566D61AD59124009B24B8 /* shader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 034566C91AD590EF009B24B8 /* shader.cpp */; };
-		034566DD1AD591C0009B24B8 /* 7mMVNTw.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 034566DB1AD591A9009B24B8 /* 7mMVNTw.jpg */; };
 		03666B171AD575E90076EC82 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 03666B161AD575E90076EC82 /* main.cpp */; };
 		03666B211AD5788B0076EC82 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03666B201AD5788B0076EC82 /* OpenGL.framework */; };
 		03666B231AD57C260076EC82 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03666B221AD57C260076EC82 /* Cocoa.framework */; };
@@ -31,7 +30,6 @@
 /* Begin PBXFileReference section */
 		034566C91AD590EF009B24B8 /* shader.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = shader.cpp; sourceTree = "<group>"; };
 		034566CA1AD590EF009B24B8 /* shader.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = shader.hpp; sourceTree = "<group>"; };
-		034566DB1AD591A9009B24B8 /* 7mMVNTw.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 7mMVNTw.jpg; sourceTree = "<group>"; };
 		03666B131AD575E90076EC82 /* GlfwTest */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = GlfwTest; sourceTree = BUILT_PRODUCTS_DIR; };
 		03666B161AD575E90076EC82 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		03666B201AD5788B0076EC82 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
@@ -87,7 +85,6 @@
 		03666B151AD575E90076EC82 /* GlfwTest */ = {
 			isa = PBXGroup;
 			children = (
-				034566DB1AD591A9009B24B8 /* 7mMVNTw.jpg */,
 				034566C21AD590EF009B24B8 /* common */,
 				03666B161AD575E90076EC82 /* main.cpp */,
 			);
@@ -151,7 +148,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				034566DD1AD591C0009B24B8 /* 7mMVNTw.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
