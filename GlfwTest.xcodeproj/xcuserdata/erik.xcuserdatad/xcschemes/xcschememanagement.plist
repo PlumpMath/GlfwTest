@@ -4,15 +4,30 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>GlfwTest.xcscheme</key>
+		<key>GlfwTestApp.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>0</integer>
+			<integer>1</integer>
+		</dict>
+		<key>GlfwTestAppTests.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>03666B121AD575E90076EC82</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>03E968DB1ADA767500423F74</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>03E968ED1ADA767600423F74</key>
 		<dict>
 			<key>primary</key>
 			<true/>

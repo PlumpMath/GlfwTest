@@ -13,7 +13,21 @@
 		03666B231AD57C260076EC82 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03666B221AD57C260076EC82 /* Cocoa.framework */; };
 		03666B251AD57C2E0076EC82 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03666B241AD57C2E0076EC82 /* IOKit.framework */; };
 		03666B271AD57C370076EC82 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03666B261AD57C370076EC82 /* CoreVideo.framework */; };
+		03E968FC1ADA76DD00423F74 /* shader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 034566C91AD590EF009B24B8 /* shader.cpp */; };
+		03E968FD1ADA76DD00423F74 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 03666B161AD575E90076EC82 /* main.cpp */; };
+		03E968FE1ADA76F400423F74 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03666B201AD5788B0076EC82 /* OpenGL.framework */; };
+		03E969001ADA772500423F74 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 03E968FF1ADA772500423F74 /* Info.plist */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		03E968EF1ADA767600423F74 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 03666B0B1AD575E90076EC82 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 03E968DB1ADA767500423F74;
+			remoteInfo = GlfwTestApp;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		03666B111AD575E90076EC82 /* CopyFiles */ = {
@@ -36,6 +50,9 @@
 		03666B221AD57C260076EC82 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		03666B241AD57C2E0076EC82 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
 		03666B261AD57C370076EC82 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		03E968DC1ADA767500423F74 /* GlfwTestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GlfwTestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		03E968EE1ADA767600423F74 /* GlfwTestAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GlfwTestAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		03E968FF1ADA772500423F74 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +64,21 @@
 				03666B251AD57C2E0076EC82 /* IOKit.framework in Frameworks */,
 				03666B231AD57C260076EC82 /* Cocoa.framework in Frameworks */,
 				03666B211AD5788B0076EC82 /* OpenGL.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		03E968D91ADA767500423F74 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03E968FE1ADA76F400423F74 /* OpenGL.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		03E968EB1ADA767600423F74 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +110,8 @@
 			isa = PBXGroup;
 			children = (
 				03666B131AD575E90076EC82 /* GlfwTest */,
+				03E968DC1ADA767500423F74 /* GlfwTestApp.app */,
+				03E968EE1ADA767600423F74 /* GlfwTestAppTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -85,6 +119,7 @@
 		03666B151AD575E90076EC82 /* GlfwTest */ = {
 			isa = PBXGroup;
 			children = (
+				03E968FF1ADA772500423F74 /* Info.plist */,
 				034566C21AD590EF009B24B8 /* common */,
 				03666B161AD575E90076EC82 /* main.cpp */,
 			);
@@ -112,6 +147,41 @@
 			productReference = 03666B131AD575E90076EC82 /* GlfwTest */;
 			productType = "com.apple.product-type.tool";
 		};
+		03E968DB1ADA767500423F74 /* GlfwTestApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 03E968FA1ADA767600423F74 /* Build configuration list for PBXNativeTarget "GlfwTestApp" */;
+			buildPhases = (
+				03E968D81ADA767500423F74 /* Sources */,
+				03E968D91ADA767500423F74 /* Frameworks */,
+				03E968DA1ADA767500423F74 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GlfwTestApp;
+			productName = GlfwTestApp;
+			productReference = 03E968DC1ADA767500423F74 /* GlfwTestApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		03E968ED1ADA767600423F74 /* GlfwTestAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 03E968FB1ADA767600423F74 /* Build configuration list for PBXNativeTarget "GlfwTestAppTests" */;
+			buildPhases = (
+				03E968EA1ADA767600423F74 /* Sources */,
+				03E968EB1ADA767600423F74 /* Frameworks */,
+				03E968EC1ADA767600423F74 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				03E968F01ADA767600423F74 /* PBXTargetDependency */,
+			);
+			name = GlfwTestAppTests;
+			productName = GlfwTestAppTests;
+			productReference = 03E968EE1ADA767600423F74 /* GlfwTestAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -124,6 +194,13 @@
 					03666B121AD575E90076EC82 = {
 						CreatedOnToolsVersion = 6.2;
 					};
+					03E968DB1ADA767500423F74 = {
+						CreatedOnToolsVersion = 6.3;
+					};
+					03E968ED1ADA767600423F74 = {
+						CreatedOnToolsVersion = 6.3;
+						TestTargetID = 03E968DB1ADA767500423F74;
+					};
 				};
 			};
 			buildConfigurationList = 03666B0E1AD575E90076EC82 /* Build configuration list for PBXProject "GlfwTest" */;
@@ -132,6 +209,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 03666B0A1AD575E90076EC82;
 			productRefGroup = 03666B141AD575E90076EC82 /* Products */;
@@ -139,12 +217,29 @@
 			projectRoot = "";
 			targets = (
 				03666B121AD575E90076EC82 /* GlfwTest */,
+				03E968DB1ADA767500423F74 /* GlfwTestApp */,
+				03E968ED1ADA767600423F74 /* GlfwTestAppTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		034566DC1AD591B6009B24B8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03E969001ADA772500423F74 /* Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		03E968DA1ADA767500423F74 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		03E968EC1ADA767600423F74 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -163,7 +258,31 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		03E968D81ADA767500423F74 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03E968FC1ADA76DD00423F74 /* shader.cpp in Sources */,
+				03E968FD1ADA76DD00423F74 /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		03E968EA1ADA767600423F74 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		03E968F01ADA767600423F74 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 03E968DB1ADA767500423F74 /* GlfwTestApp */;
+			targetProxy = 03E968EF1ADA767600423F74 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		03666B181AD575E90076EC82 /* Debug */ = {
@@ -274,6 +393,76 @@
 			};
 			name = Release;
 		};
+		03E968F61ADA767600423F74 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/GlfwTest/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		03E968F71ADA767600423F74 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/GlfwTest/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		03E968F81ADA767600423F74 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = GlfwTestAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GlfwTestApp.app/Contents/MacOS/GlfwTestApp";
+			};
+			name = Debug;
+		};
+		03E968F91ADA767600423F74 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = GlfwTestAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GlfwTestApp.app/Contents/MacOS/GlfwTestApp";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -294,6 +483,22 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		03E968FA1ADA767600423F74 /* Build configuration list for PBXNativeTarget "GlfwTestApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				03E968F61ADA767600423F74 /* Debug */,
+				03E968F71ADA767600423F74 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		03E968FB1ADA767600423F74 /* Build configuration list for PBXNativeTarget "GlfwTestAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				03E968F81ADA767600423F74 /* Debug */,
+				03E968F91ADA767600423F74 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

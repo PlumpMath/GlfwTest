@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0620"
+   LastUpgradeVersion = "0630"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -9,14 +9,14 @@
          <BuildActionEntry
             buildForTesting = "YES"
             buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "03666B121AD575E90076EC82"
-               BuildableName = "GlfwTest"
-               BlueprintName = "GlfwTest"
+               BlueprintIdentifier = "03E968ED1ADA767600423F74"
+               BuildableName = "GlfwTestAppTests.xctest"
+               BlueprintName = "GlfwTestAppTests"
                ReferencedContainer = "container:GlfwTest.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -28,13 +28,23 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       buildConfiguration = "Debug">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "03E968ED1ADA767600423F74"
+               BuildableName = "GlfwTestAppTests.xctest"
+               BlueprintName = "GlfwTestAppTests"
+               ReferencedContainer = "container:GlfwTest.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "03666B121AD575E90076EC82"
-            BuildableName = "GlfwTest"
-            BlueprintName = "GlfwTest"
+            BlueprintIdentifier = "03E968ED1ADA767600423F74"
+            BuildableName = "GlfwTestAppTests.xctest"
+            BlueprintName = "GlfwTestAppTests"
             ReferencedContainer = "container:GlfwTest.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -48,16 +58,15 @@
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "03666B121AD575E90076EC82"
-            BuildableName = "GlfwTest"
-            BlueprintName = "GlfwTest"
+            BlueprintIdentifier = "03E968ED1ADA767600423F74"
+            BuildableName = "GlfwTestAppTests.xctest"
+            BlueprintName = "GlfwTestAppTests"
             ReferencedContainer = "container:GlfwTest.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -67,16 +76,15 @@
       useCustomWorkingDirectory = "NO"
       buildConfiguration = "Release"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "03666B121AD575E90076EC82"
-            BuildableName = "GlfwTest"
-            BlueprintName = "GlfwTest"
+            BlueprintIdentifier = "03E968ED1ADA767600423F74"
+            BuildableName = "GlfwTestAppTests.xctest"
+            BlueprintName = "GlfwTestAppTests"
             ReferencedContainer = "container:GlfwTest.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

@@ -48,8 +48,11 @@ int main(void)
     const char *vs_source =
     "#version 330 core                                             \n"
     "layout (location = 0) in vec3 position;                         "
+    "out float instid;                                               "
     "void main(void) {                                               "
-    "  gl_Position = vec4(position.x, position.y, position.z, 1.0);  "
+    "  float xmod = -0.9 + gl_InstanceID * 0.05f;                    "
+    "  instid = gl_InstanceID;                                       "
+    "  gl_Position = vec4(position.x + xmod, position.y, position.z, 1.0);  "
     "}                                                               ";
     
     glShaderSource(vs, 1, &vs_source, NULL);
@@ -68,9 +71,10 @@ int main(void)
     
     const char *fs_source =
     "#version 330 core                                      \n"
+    "in float instid;                                         "
     "out vec4 color;                                          "
     "void main(void) {                                        "
-    "  color = vec4(1.0f, 0.0f, 1.0f, 1.0f);                  "
+    "  color = vec4(1.0f, 0.5f, instid * 0.1f, 1.0f);                  "
     "}                                                        ";
     
     glShaderSource(fs, 1, &fs_source, NULL);
@@ -99,9 +103,9 @@ int main(void)
     }
     
     static const GLfloat triangle_vertices[] = {
-        -0.8f, -0.8f, 0.0f,
-        1.0f, -1.0f, 0.0f,
-        0.0f,  1.0f, 0.0f,
+        0.8f, -0.8f, 0.0f,
+        0.9f, -0.6f, 0.0f,
+        0.0f,  0.8f, 0.0f,
     };
 
     GLuint vao;
@@ -113,14 +117,14 @@ int main(void)
     glBindBuffer(GL_ARRAY_BUFFER, vbo);
     glBufferData(GL_ARRAY_BUFFER, sizeof(triangle_vertices), triangle_vertices, GL_STATIC_DRAW);
     
-    const char* attribute_name = "position";
-    int attr_position = glGetAttribLocation(program, attribute_name);
-    if (attr_position == -1) {
-        fprintf(stderr, "Could not bind attribute %s\n", attribute_name);
-        return 0;
-    }
+//    const char* attribute_name = "position";
+//    int attr_position = glGetAttribLocation(program, attribute_name);
+//    if (attr_position == -1) {
+//        fprintf(stderr, "Could not bind attribute %s\n", attribute_name);
+//        return 0;
+//    }
 
-    glClearColor(0.7, 0.7, 0.8, 1.0);
+    glClearColor(0.98, 0.98, 0.98, 1.0);
 
     /* Loop until the user closes the window */
     while (!glfwWindowShouldClose(window))
@@ -128,10 +132,10 @@ int main(void)
         glClear(GL_COLOR_BUFFER_BIT);
         
         glUseProgram(program);
-        glEnableVertexAttribArray(attr_position);
+        glEnableVertexAttribArray(0);
         
         /* Describe our vertices array to OpenGL (it can't guess its format automatically) */
-        glVertexAttribPointer(attr_position, // attribute
+        glVertexAttribPointer(0, // attribute
                               2,                 // number of elements per vertex, here (x,y)
                               GL_FLOAT,          // the type of each element
                               GL_FALSE,          // take our values as-is
@@ -139,8 +143,8 @@ int main(void)
                               0
                               );
         
-        glDrawArrays(GL_TRIANGLES, 0, 6);
-        glDisableVertexAttribArray(attr_position);
+        glDrawArraysInstanced(GL_TRIANGLES, 0, 6, 20);
+        glDisableVertexAttribArray(0);
         
         glfwSwapBuffers(window);
         glfwPollEvents();
