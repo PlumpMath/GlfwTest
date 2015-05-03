@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>DC9693C3-F93A-42B6-A49A-44626AF2D02C</string>
 	<key>IDESourceControlProjectName</key>
-	<string>GlfwTest</string>
+	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>37FA15F9283BA88F293AFAE36D2E45255CFC8153</key>
 		<string>https://github.com/eriksvedang/GlfwTest.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>GlfwTest.xcodeproj</string>
+	<string>GlfwTest.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>37FA15F9283BA88F293AFAE36D2E45255CFC8153</key>
